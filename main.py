@@ -84,7 +84,12 @@ class TicTacToe3D(object):
   #  def setup():
    #     play_game(self)
 
+# in code ha ye bala ro ostad dade
+
     def play_game(self):
+
+      # this self np board thing is one of the tests, the assignment has 7 tests, and it runs automatically in gitup.. but i was testing it here
+      # play game starts from self. player_1 = -1
         self.np_board = np.array([[[ 0, 0, 0],
                               [ 0, 1, 0],
                               [ 0, 0,-1]],
@@ -229,6 +234,9 @@ class TicTacToe3D(object):
         self.np_board[move[0], move[1], move[2]] = current_player
         self.allowed_moves.remove(self.map_ind_to_seq[(move[0], move[1], move[2])])
         self.player_1_turn = not self.player_1_turn  # Switch the player's turn
+
+# minimax is a thing that makes the best move.. like it sees all the moves, and then picks the one with the best chance of wining.
+# alpha beta pruning is a thig that will cut the search for best move when minimax finds the best move and wont go through the rest.
 
     def minimax(self, depth, is_maximizing, alpha, beta):
         # Check for a winner or a tie and return the corresponding score
